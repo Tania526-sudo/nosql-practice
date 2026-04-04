@@ -10,7 +10,7 @@ A simple Python project that connects to a local Redis instance, stores the curr
 
 ---
 
-## Project Overview / Опис проєкту
+## Project Overview
 
 This project demonstrates a basic integration between Python and Redis.  
 The application:
