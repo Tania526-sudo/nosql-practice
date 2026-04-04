@@ -1,0 +1,12 @@
+{
+  "_id": "67fa1201ab34cd501",
+  "sku": "BLZ-0001-GR-M",
+  "product_id": "BLZ-0001",
+  "color_id": "COL001",
+  "size": "M",
+  "stock": 7,
+  "reserved": 2,
+  "available": true,
+  "warehouse_id": "WH-KYIV-01",
+  "updated_at": "2026-04-04T10:30:00Z"
+}

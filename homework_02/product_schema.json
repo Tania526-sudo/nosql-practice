@@ -1,0 +1,63 @@
+{
+  "_id": "ObjectId",
+  "product_id": "string",
+  "slug": "string",
+  "name": {
+    "en": "string",
+    "uk": "string"
+  },
+  "brand": {
+    "brand_id": "string",
+    "name": "string"
+  },
+  "category": {
+    "category_id": "string",
+    "name": "string",
+    "path": ["string"]
+  },
+  "gender": "string",
+  "description": {
+    "en": "string",
+    "uk": "string"
+  },
+  "price": {
+    "amount": "number",
+    "currency": "string",
+    "discounted_amount": "number"
+  },
+  "colors": [
+    {
+      "color_id": "string",
+      "color_name": "string",
+      "color_code": "string",
+      "images": [
+        {
+          "url": "string",
+          "alt": "string",
+          "position": "number"
+        }
+      ]
+    }
+  ],
+  "sizes": ["string"],
+  "material": {
+    "composition": [
+      {
+        "component": "string",
+        "percentage": "number"
+      }
+    ],
+    "care_instructions": ["string"]
+  },
+  "fit": "string",
+  "tags": ["string"],
+  "season": "string",
+  "country_of_origin": "string",
+  "rating_summary": {
+    "average": "number",
+    "count": "number"
+  },
+  "published": "boolean",
+  "created_at": "datetime",
+  "updated_at": "datetime"
+}

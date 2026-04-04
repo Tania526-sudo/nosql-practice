@@ -1,0 +1,37 @@
+{
+  "_id": "67fa1201ab34ce700",
+  "order_id": "ORD-2026-0001",
+  "customer_id": "CUST-001",
+  "items": [
+    {
+      "product_id": "BLZ-0001",
+      "sku": "BLZ-0001-GR-M",
+      "name": "Check Comfort Textured Suit Blazer",
+      "color": "Grey",
+      "size": "M",
+      "quantity": 1,
+      "unit_price": 3999,
+      "currency": "UAH"
+    }
+  ],
+  "payment": {
+    "method": "card",
+    "status": "paid",
+    "paid_at": "2026-04-04T11:10:00Z"
+  },
+  "delivery": {
+    "method": "courier",
+    "address": {
+      "country": "Ukraine",
+      "city": "Kyiv",
+      "street": "Khreshchatyk 1",
+      "postal_code": "01001"
+    },
+    "status": "processing"
+  },
+  "total_amount": 3999,
+  "currency": "UAH",
+  "status": "confirmed",
+  "created_at": "2026-04-04T11:00:00Z",
+  "updated_at": "2026-04-04T11:10:00Z"
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "ObjectId",
+  "category_id": "string",
+  "name": {
+    "en": "string",
+    "uk": "string"
+  },
+  "parent_category_id": "string",
+  "path": ["string"],
+  "level": "number",
+  "active": "boolean"
+}
