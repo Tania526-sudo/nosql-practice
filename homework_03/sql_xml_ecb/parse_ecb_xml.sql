@@ -15,7 +15,6 @@ SET @XML_SRC = N'<?xml version="1.0" encoding="UTF-8"?>
 
 Option B:
 Load from a local file using OPENROWSET.
-Adjust the path to your downloaded XML file.
 */
 
 SELECT @XML_SRC = TRY_CAST(BulkColumn AS XML)
@@ -71,7 +70,7 @@ CREATE TABLE dbo.tblCurrencyRate
 
 /* ------------------------------------------------------------------
    STEP 4. PARSE XML INTO CTE
-   Typical ECB structure:
+   ECB structure:
    /gesmes:Envelope/ecb:Cube/ecb:Cube[@time]/ecb:Cube[@currency, @rate]
    ------------------------------------------------------------------ */
 
