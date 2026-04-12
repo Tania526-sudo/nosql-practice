@@ -1,0 +1,61 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "store_id": "STORE_KYIV_01",
+        "name": "Rozetka Pickup Kyiv Center",
+        "store_type": "pickup_point",
+        "city": "Kyiv",
+        "address": "Khreshchatyk 1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [30.5234, 50.4501]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "store_id": "STORE_KYIV_02",
+        "name": "Rozetka Store Kyiv Left Bank",
+        "store_type": "store",
+        "city": "Kyiv",
+        "address": "Mykola Bazhan Avenue 10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [30.6147, 50.3976]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "store_id": "STORE_LVIV_01",
+        "name": "Rozetka Pickup Lviv Center",
+        "store_type": "pickup_point",
+        "city": "Lviv",
+        "address": "Svobody Avenue 15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.0316, 49.8397]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "store_id": "STORE_DNIPRO_01",
+        "name": "Rozetka Store Dnipro",
+        "store_type": "store",
+        "city": "Dnipro",
+        "address": "Dmytra Yavornytskoho Avenue 55"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [35.0462, 48.4647]
+      }
+    }
+  ]
+}

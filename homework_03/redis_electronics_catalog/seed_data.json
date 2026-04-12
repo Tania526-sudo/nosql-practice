@@ -6,10 +6,15 @@
     "model": "Galaxy A35 5G 8/128GB",
     "price_uah": 15999,
     "body_color": "Awesome Navy",
-    "stock": 14,
     "screen_size_inches": 6.6,
     "screen_type": "Super AMOLED",
-    "sim_count": 2
+    "sim_count": 2,
+    "store_stock": {
+      "STORE_KYIV_01": 5,
+      "STORE_KYIV_02": 3,
+      "STORE_LVIV_01": 2,
+      "STORE_DNIPRO_01": 4
+    }
   },
   {
     "sku": "SAMSUNG-A55-5G-256",
@@ -18,10 +23,15 @@
     "model": "Galaxy A55 5G 8/256GB",
     "price_uah": 19999,
     "body_color": "Awesome Iceblue",
-    "stock": 9,
     "screen_size_inches": 6.6,
     "screen_type": "Super AMOLED",
-    "sim_count": 2
+    "sim_count": 2,
+    "store_stock": {
+      "STORE_KYIV_01": 4,
+      "STORE_KYIV_02": 2,
+      "STORE_LVIV_01": 1,
+      "STORE_DNIPRO_01": 2
+    }
   },
   {
     "sku": "SAMSUNG-S23-128",
@@ -30,10 +40,15 @@
     "model": "Galaxy S23 8/128GB",
     "price_uah": 24999,
     "body_color": "Phantom Black",
-    "stock": 4,
     "screen_size_inches": 6.1,
     "screen_type": "Dynamic AMOLED 2X",
-    "sim_count": 2
+    "sim_count": 2,
+    "store_stock": {
+      "STORE_KYIV_01": 1,
+      "STORE_KYIV_02": 1,
+      "STORE_LVIV_01": 1,
+      "STORE_DNIPRO_01": 1
+    }
   },
   {
     "sku": "APPLE-IPHONE13MINI-128",
@@ -42,10 +57,15 @@
     "model": "iPhone 13 mini 128GB",
     "price_uah": 21999,
     "body_color": "Blue",
-    "stock": 6,
     "screen_size_inches": 5.4,
     "screen_type": "Super Retina XDR OLED",
-    "sim_count": 1
+    "sim_count": 1,
+    "store_stock": {
+      "STORE_KYIV_01": 2,
+      "STORE_KYIV_02": 1,
+      "STORE_LVIV_01": 2,
+      "STORE_DNIPRO_01": 1
+    }
   },
   {
     "sku": "ASUS-ZENFONE10-256",
@@ -54,10 +74,15 @@
     "model": "Zenfone 10 8/256GB",
     "price_uah": 23999,
     "body_color": "Black",
-    "stock": 3,
     "screen_size_inches": 5.92,
     "screen_type": "AMOLED",
-    "sim_count": 2
+    "sim_count": 2,
+    "store_stock": {
+      "STORE_KYIV_01": 1,
+      "STORE_KYIV_02": 1,
+      "STORE_LVIV_01": 1,
+      "STORE_DNIPRO_01": 0
+    }
   },
   {
     "sku": "SAMSUNG-QE55Q60D",
@@ -66,10 +91,15 @@
     "model": "Samsung QE55Q60D",
     "price_uah": 28999,
     "body_color": "Black",
-    "stock": 5,
     "diagonal_inches": 55,
     "panel_type": "QLED",
-    "resolution": "3840x2160"
+    "resolution": "3840x2160",
+    "store_stock": {
+      "STORE_KYIV_01": 2,
+      "STORE_KYIV_02": 1,
+      "STORE_LVIV_01": 1,
+      "STORE_DNIPRO_01": 1
+    }
   },
   {
     "sku": "LG-OLED55C4",
@@ -78,10 +108,15 @@
     "model": "LG OLED55C4",
     "price_uah": 64999,
     "body_color": "Titan Black",
-    "stock": 2,
     "diagonal_inches": 55,
     "panel_type": "OLED",
-    "resolution": "3840x2160"
+    "resolution": "3840x2160",
+    "store_stock": {
+      "STORE_KYIV_01": 1,
+      "STORE_KYIV_02": 1,
+      "STORE_LVIV_01": 0,
+      "STORE_DNIPRO_01": 0
+    }
   },
   {
     "sku": "SONY-KD50X85L",
@@ -90,9 +125,14 @@
     "model": "Sony KD-50X85L",
     "price_uah": 32999,
     "body_color": "Black",
-    "stock": 4,
     "diagonal_inches": 50,
     "panel_type": "LED",
-    "resolution": "3840x2160"
+    "resolution": "3840x2160",
+    "store_stock": {
+      "STORE_KYIV_01": 1,
+      "STORE_KYIV_02": 1,
+      "STORE_LVIV_01": 1,
+      "STORE_DNIPRO_01": 1
+    }
   }
 ]

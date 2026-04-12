@@ -8,13 +8,14 @@ DECLARE @XML_SRC XML;
 
 /*
 Option A:
-Paste the XML content directly into the variable:
+Paste the XML text directly into the variable:
 
 SET @XML_SRC = N'<?xml version="1.0" encoding="UTF-8"?>
 ... full ECB XML here ...';
 
 Option B:
-Load file content locally through OPENROWSET.
+Load from a local file using OPENROWSET.
+Adjust the path to your downloaded XML file.
 */
 
 SELECT @XML_SRC = TRY_CAST(BulkColumn AS XML)
@@ -29,7 +30,7 @@ BEGIN
 END;
 
 /* ------------------------------------------------------------------
-   STEP 2. DROP OLD TABLES IF NEEDED
+   STEP 2. DROP OLD TABLES IF THEY EXIST
    ------------------------------------------------------------------ */
 
 IF OBJECT_ID('dbo.tblCurrencyRate', 'U') IS NOT NULL
@@ -46,8 +47,10 @@ CREATE TABLE dbo.tblCurrency
 (
     CurrencyCode CHAR(3) NOT NULL PRIMARY KEY,
     CurrencyName NVARCHAR(100) NULL,
-    IsBaseCurrency BIT NOT NULL CONSTRAINT DF_tblCurrency_IsBaseCurrency DEFAULT (0),
-    SourceSystem NVARCHAR(50) NOT NULL CONSTRAINT DF_tblCurrency_SourceSystem DEFAULT ('ECB')
+    IsBaseCurrency BIT NOT NULL
+        CONSTRAINT DF_tblCurrency_IsBaseCurrency DEFAULT (0),
+    SourceSystem NVARCHAR(50) NOT NULL
+        CONSTRAINT DF_tblCurrency_SourceSystem DEFAULT ('ECB')
 );
 
 CREATE TABLE dbo.tblCurrencyRate
@@ -55,9 +58,11 @@ CREATE TABLE dbo.tblCurrencyRate
     CurrencyRateID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     CurrencyCode CHAR(3) NOT NULL,
     RateDate DATE NOT NULL,
-    BaseCurrencyCode CHAR(3) NOT NULL CONSTRAINT DF_tblCurrencyRate_Base DEFAULT ('EUR'),
-    Rate DECIMAL(18, 8) NOT NULL,
-    CreatedAt DATETIME2 NOT NULL CONSTRAINT DF_tblCurrencyRate_CreatedAt DEFAULT (SYSUTCDATETIME()),
+    BaseCurrencyCode CHAR(3) NOT NULL
+        CONSTRAINT DF_tblCurrencyRate_Base DEFAULT ('EUR'),
+    Rate DECIMAL(18,8) NOT NULL,
+    CreatedAt DATETIME2 NOT NULL
+        CONSTRAINT DF_tblCurrencyRate_CreatedAt DEFAULT (SYSUTCDATETIME()),
     CONSTRAINT FK_tblCurrencyRate_tblCurrency
         FOREIGN KEY (CurrencyCode) REFERENCES dbo.tblCurrency (CurrencyCode),
     CONSTRAINT UQ_tblCurrencyRate_CurrencyCode_RateDate
@@ -65,7 +70,8 @@ CREATE TABLE dbo.tblCurrencyRate
 );
 
 /* ------------------------------------------------------------------
-   STEP 4. PARSE ECB XML
+   STEP 4. PARSE XML INTO CTE
+   Typical ECB structure:
    /gesmes:Envelope/ecb:Cube/ecb:Cube[@time]/ecb:Cube[@currency, @rate]
    ------------------------------------------------------------------ */
 
@@ -103,6 +109,10 @@ BEGIN
     VALUES ('EUR', 'Euro', 1, 'ECB');
 END;
 
+/* ------------------------------------------------------------------
+   STEP 5. INSERT EXCHANGE RATES
+   ------------------------------------------------------------------ */
+
 ;WITH XMLNAMESPACES
 (
     'http://www.gesmes.org/xml/2002-08-01' AS gesmes,
@@ -132,7 +142,7 @@ SELECT
 FROM ParsedRates AS P;
 
 /* ------------------------------------------------------------------
-   STEP 5. CHECK RESULTS
+   STEP 6. VALIDATION QUERIES
    ------------------------------------------------------------------ */
 
 SELECT *
@@ -144,7 +154,7 @@ FROM dbo.tblCurrencyRate
 ORDER BY RateDate DESC, CurrencyCode;
 
 /* ------------------------------------------------------------------
-   STEP 6. EXAMPLE ANALYTICAL QUERY
+   STEP 7. EXAMPLE ANALYTICAL QUERY
    ------------------------------------------------------------------ */
 
 SELECT
