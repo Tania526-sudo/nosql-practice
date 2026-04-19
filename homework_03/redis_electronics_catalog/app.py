@@ -237,7 +237,7 @@ def seed_products(r: redis.Redis, products: List[Dict[str, Any]]) -> None:
 
 
 def seed_all(r: redis.Redis) -> None:
-    products = load_json("seed_products.json")
+    products = load_json("seed_data.json")
     stores_geojson = load_json("seed_stores.geojson")
 
     r.flushdb()
