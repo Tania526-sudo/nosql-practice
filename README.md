@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/DAX-Measures-742774?style=for-the-badge&logo=powerbi&logoColor=white" />
   <img src="https://img.shields.io/badge/BI-Star%20Schema-00A36C?style=for-the-badge" />
 </p>
----
+
 
 The main analytical goal is to visualize **daily taxi revenue for a selected month** and allow users to explore the results using business filters:
 
@@ -60,7 +60,7 @@ Recommended relationship settings:
 | ---------------------- | ----------------------------- |
 | Cardinality            | One-to-many                   |
 | Cross-filter direction | Single                        |
-| Filter flow            | Dimension tables → Fact table |
+| Filter flow            | Dimension tables - Fact table |
 
 ---
 
